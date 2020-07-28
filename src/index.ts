@@ -1,15 +1,15 @@
 import express from 'express';
-
+import Routes from './routes'
 //Initialization 
 const app = express();
 
 //Settings
 app.set('port', process.env.PORT || 3000);
-
+import './database';
 //Middlewares
 
 //Routes
-app.get('/', (req, res) => res.send('El servidor está funcionando'));
+app.use('/', Routes);
 //Static files
 
 //starting the server
