@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-
+import UserModel,{User} from '../models/User';
 // interface user{
 //     nombre:string;
 //     apellido:string;
@@ -19,21 +19,12 @@ class AddUser {
     //     console.log(req.body);
     //     res.send('Adding');
     // }
-    public add (algo:Object) {
-        //   const user = {
-        //     nombre:this.nombre,
-        //     apellido:this.apellido,
-        //     edad:this.edad
-        // };
-        // if(typeof this.nombre !== undefined && typeof this.apellido !== undefined && typeof this.edad !== undefined){
-        // const {nombre, apellido, edad} = algo;
-        // }
-
-        // console.log('This user ', user);
-        // console.log('Hola');
-        // res.send('Received');
+    public  add (algo:Object) {
+        
+        const user:User = new UserModel(algo);
+         user.save();
         console.log(algo);
-        // return 'Something';
+
     }
 }
 
