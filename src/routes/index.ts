@@ -1,9 +1,10 @@
 import { Router } from 'express';
 import { indexController } from '../controllers/indexControllers';
+import { addUser } from '../controllers/addUser';
 
 const router: Router = Router();
 
 router.get('/', indexController.index);
-router.get('/add', (req, res) => {res.send('Adding')});
+router.get('/add', addUser.add);
 
 export default router;
