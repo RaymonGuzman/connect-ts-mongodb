@@ -1,11 +1,12 @@
 import express from 'express';
 import Routes from './routes'
+
 //Initialization 
 const app = express();
+import './database';
 
 //Settings
-app.set('port', process.env.PORT || 4000);
-import './database';
+app.set('port', process.env.PORT || 3000);
 //Middlewares
 
 //Routes

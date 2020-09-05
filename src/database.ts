@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import  {mongodb } from './keys'
+import  { mongodb } from './keys'
 
 mongoose.connect(mongodb.URI, {
     useNewUrlParser: true

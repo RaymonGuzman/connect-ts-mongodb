@@ -19,17 +19,25 @@ class AddUser {
     //     console.log(req.body);
     //     res.send('Adding');
     // }
-    public  add (algo:Object) {
+    public async addUser (Identification:Object) {
         
-        const user:User = new UserModel(algo);
-         user.save();
-        console.log(algo);
+        const user:User = new UserModel(Identification);
+         await user.save();
+        console.log(Identification);
 
     }
+
+    public savingData (req:Request, res:Response) {
+        addUser.addUser({nombre:'Raymon', apellido:'Guzman',edad:20});
+        res.send('Data Saved');
+   }
+
+
+    
 }
 
 export const addUser = new AddUser();
 
 
-addUser.add({nombre:'Raymon', apellido:'Guzman',edad:20});
+// addUser.add({nombre:'Raymon', apellido:'Guzman',edad:20});
 // console.log(addUser);
