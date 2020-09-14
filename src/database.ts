@@ -1,9 +1,9 @@
 import mongoose from 'mongoose';
 
-import  { mongodb } from './keys'
+import { mongodb } from './keys';
 
 mongoose.connect(mongodb.URI, {
-    useNewUrlParser: true
+  useNewUrlParser: true,
 })
-    .then(db => console.log('Db is Connected'))
-    .catch(err => console.log(err));
+  .then((db) => console.log('Db is Connected'))
+  .catch((err) => console.log(err));

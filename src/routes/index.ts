@@ -7,5 +7,4 @@ const router: Router = Router();
 router.get('/', indexController.index);
 router.get('/add', addUser.savingData);
 
-
 export default router;

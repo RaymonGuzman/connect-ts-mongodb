@@ -11,6 +11,13 @@ $ npm i @types/express -D
 $ npm i nodemon -D
 $ npm i @types/mongoose
 
+--Eslint Configuration
+$ npm i -D eslint-config-airbnb-typescript@7 eslint-plugin-import@2
+$ npm install eslint-plugin-react@latest --save-dev
+$ npm install eslint-config-airbnb-typescript \
+            eslint-plugin-import@^2.22.0 \
+            @typescript-eslint/eslint-plugin@^4.0.1 \
+            --save-dev
 
 --To Check After Saving Data
 $ mongo
